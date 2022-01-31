@@ -1,3 +1,5 @@
+<?php get_header("", array( 'name' => 'Josh Kerbel', 'age' => 48 )); ?>
+
 <?php
 
 while(have_posts()){
@@ -11,4 +13,6 @@ while(have_posts()){
 
 ?>
 
+
+<?php get_footer(); ?>
 
