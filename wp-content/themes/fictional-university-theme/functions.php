@@ -22,6 +22,11 @@ add_action("wp_enqueue_scripts", "university_files");
 
 function university_features(){
     add_theme_support("title-tag");
+    //added a menu code name and user friendly name
+    register_nav_menus(array("headerMenuLocation" => __("Header Menu"), 
+                            'footerLocation1' => __( 'Footer 1 menu' ),
+                            'footerLocation2' => __( 'Footer 2 menu' )
+                        ));
 }
 add_action("after_setup_theme", 'university_features')
 
