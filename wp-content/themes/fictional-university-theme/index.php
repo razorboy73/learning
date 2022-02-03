@@ -33,7 +33,7 @@ get_header()
       </div>
        
      <?php }// end of while loop
-
+    echo paginate_links();
     }// end of if stateent
    ?>
     </div>

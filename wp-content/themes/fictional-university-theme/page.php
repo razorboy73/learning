@@ -12,7 +12,7 @@ while(have_posts()){
             <p>Change This Stuff.</p>
             </div>
         </div>
-        </div>
+    </div>
 
         <div class="container container--narrow page-section">
             <?php 
@@ -26,7 +26,7 @@ while(have_posts()){
                     <i class="fa fa-home" aria-hidden="true"></i>Back To: <?php echo get_the_title($theParentPost);?></a> 
                     <span class="metabox__main"><?php the_title(); ?></span>
                     </p>
-        </div>
+                </div>
              
           <?php  }
             
