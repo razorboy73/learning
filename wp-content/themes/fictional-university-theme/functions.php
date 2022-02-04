@@ -28,7 +28,10 @@ function university_features(){
                             'footerLocation2' => __( 'Footer 2 menu' )
                         ));
 }
-add_action("after_setup_theme", 'university_features')
+add_action("after_setup_theme", 'university_features');
+
+
+
 
 
 ?>
