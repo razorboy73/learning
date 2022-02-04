@@ -6,6 +6,7 @@ function university_post_types(){
         //for the archive, it uses the register post type name parameter, not the label
         //or url rewrite
         "has_archive" => true,
+        "show_in_rest" => true,
         "description" => "What is going on around campus",
         "public" => true,
         "labels" => array(
@@ -17,9 +18,15 @@ function university_post_types(){
         ),
         "menu_icon" => "dashicons-calendar",
         'rewrite'     => array( 'slug' => 'amazing-events' ),
+        "supports" => array(
+            "title",
+            "editor",
+            "excerpt"
+        )
+        ),
         
 
-    ));
+    );
 
 }
 
