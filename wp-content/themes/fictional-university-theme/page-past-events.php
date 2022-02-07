@@ -27,7 +27,7 @@ get_header()
 
           <?php  }
 
-          else{
+          elseif(is_archive()){
               the_archive_title(); ?>
             </h1>
             <div class="page-banner__intro">
@@ -37,9 +37,18 @@ get_header()
               
           <?php }
 
+          else{
+            the_title(); ?>
+          </h1>
+            <div class="page-banner__intro">
+            <p>A Recap Of Past Events </p>
+            </div>
+
+              
+          <?php }
+
 
             ?>
-
 
            
         </div>
@@ -47,9 +56,29 @@ get_header()
   
     <div class="container container--narrow page-section">
    <?php
-    if(have_posts()){
-      while(have_posts()){ 
-        the_post()?>
+        $today = date("Y-m-d");
+            //has to match return value in ACF
+        $pastEvents = new WP_Query(array(
+            "paged" => get_query_var("paged", 1),
+            "post_type" => 'event',
+            "meta_key"=> "event_date",
+            //https://developer.wordpress.org/reference/classes/wp_query/#order-orderby-parameters
+            "orderby" => "meta_value_num",
+            'order' => "ASC",
+            //https://developer.wordpress.org/reference/classes/wp_meta_query/#user-contributed-notes
+            "meta_query" => array(
+              array(
+                "key"=>"event_date",
+                "compare" => "<",
+                "value"=> $today,
+                "type" => 'DATE'
+              )
+            )
+          ));
+
+    
+      while($pastEvents->have_posts()){ 
+        $pastEvents->the_post()?>
         <div class="event-summary">
         <a class="event-summary__date t-center" href="<?php the_permalink()?>">
             <span class="event-summary__month"><?php 
@@ -84,11 +113,13 @@ get_header()
     
        
      <?php }// end of while loop
-    echo paginate_links();
-    }// end of if stateent
+    echo paginate_links(array(
+        "total" => $pastEvents->max_num_pages
+    )
+
+    );
+    // end of if stateent
    ?>
-   <hr class="section-break">
-   <p>Looking for past events?  <a href="<?php echo site_url(('/past-events'))?>">Check out past events archive page</a>.</p>
     </div>
       
 <?php
