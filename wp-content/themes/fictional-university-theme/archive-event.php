@@ -51,9 +51,29 @@ get_header()
       while(have_posts()){ 
         the_post()?>
         <div class="event-summary">
-            <a class="event-summary__date t-center" href="<?php the_permalink()?>">
-            <span class="event-summary__month"><?php the_date("M");?></span>
-              <span class="event-summary__day"><?php the_time("d");?></span>
+        <a class="event-summary__date t-center" href="<?php the_permalink()?>">
+            <span class="event-summary__month"><?php 
+            
+            $eventDate = new DateTime(get_field('event_date'));
+            
+            echo $eventDate->format("M");
+            
+            
+            
+            
+            ?></span>
+              <span class="event-summary__day">
+              <?php 
+            
+                $eventDate = new DateTime(get_field('event_date'));
+            
+                echo $eventDate->format("j");
+            
+            
+            
+            
+            ?>
+              </span>
             </a>
             <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink()?>"><?php the_title(); ?></a></h5>
@@ -61,16 +81,7 @@ get_header()
           </div>
           </div>
 
-      <!-- <div class="post-item"> -->
-         <!-- <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2> -->
-        <!-- <div class="metabox"> -->
-          <!-- <p>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F jS, Y'); ?> in <?php the_category( ', ' ); ?></p> -->
-        <!-- </div> -->
-        <!-- <div class="generic-content"> -->
-          <!-- <?php the_excerpt(); ?> -->
-          <!-- <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Read More</a></p> -->
-        <!-- </div> -->
-      <!-- </div> -->
+    
        
      <?php }// end of while loop
     echo paginate_links();

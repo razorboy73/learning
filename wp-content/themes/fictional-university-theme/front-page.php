@@ -19,7 +19,7 @@
             $today = date("Y-m-d");
             //has to match return value in ACF
           $homePageEvents = new WP_Query(array(
-            "posts_per_page" => -1,
+            "posts_per_page" => 2,
             "post_type" => 'event',
             "meta_key"=> "event_date",
             //https://developer.wordpress.org/reference/classes/wp_query/#order-orderby-parameters
