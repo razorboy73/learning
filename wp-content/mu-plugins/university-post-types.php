@@ -8,7 +8,7 @@ function university_post_types(){
         //for the archive, it uses the register post type name parameter, not the label
         //or url rewrite
         "has_archive" => true,
-        "supports"=> array("title", "editor,", "excerpt"),
+     
         "show_in_rest" => true,
         "description" => "What is going on around campus",
         "public" => true,
@@ -37,7 +37,7 @@ function university_post_types(){
         //for the archive, it uses the register post type name parameter, not the label
         //or url rewrite
         "has_archive" => true,
-        "supports"=> array("title", "editor,"),
+     
         "show_in_rest" => true,
         "description" => "What is going on around campus",
         "public" => true,
@@ -50,6 +50,36 @@ function university_post_types(){
         ),
         "menu_icon" => "dashicons-awards",
         'rewrite'     => array( 'slug' => 'programs' ),
+        "supports" => array(
+            "title",
+            "editor"
+           
+            
+
+        )
+        ),
+        
+
+    );
+
+    register_post_type("professor", array(
+        //Creates professor post type
+        //for the archive, it uses the register post type name parameter, not the label
+        //or url rewrite
+        
+        "supports"=> array("title", "editor,"),
+        "show_in_rest" => true,
+        "description" => "What is going on around campus",
+        "public" => true,
+        "labels" => array(
+            "name" => "Professors",
+            "add_new_item" => "Add New Crappy professor",
+            "edit_item" => "Edit Your Boring professor",
+            "all_items" => "All Old Professors",
+            "singular_name" => "professor",
+        ),
+        "menu_icon" => "dashicons-welcome-learn-more",
+        
         "supports" => array(
             "title",
             "editor",
