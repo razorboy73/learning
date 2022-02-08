@@ -44,13 +44,13 @@ get_header(); ?>
                 "compare" => ">=",
                 "value"=> $today,
                 "type" => 'DATE'
-              )
               ),
               array(
                   "key" => 'related_programs',
                   "compare"=> "LIKE",
                   "value" => '"'.get_the_ID().'"'
               )
+            )
           ));
           while($homePageEvents->have_posts()){
             $homePageEvents->the_post(); ?>
