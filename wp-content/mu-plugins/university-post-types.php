@@ -52,7 +52,8 @@ function university_post_types(){
         'rewrite'     => array( 'slug' => 'programs' ),
         "supports" => array(
             "title",
-            "editor"
+            "editor",
+            "thumbnail"
            
             
 
@@ -84,6 +85,7 @@ function university_post_types(){
             "title",
             "editor",
             "excerpt",
+            "thumbnail"
             
 
         )
