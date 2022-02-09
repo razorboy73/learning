@@ -20,6 +20,9 @@
 # and "themes" directories.
 wp-content/*
 !wp-content/plugins/
+!wp-content/themes/fictional-university-theme/build
+!wp-content/themes/fictional-university-theme/src/modules
+wp-content/themes/fictional-university-theme/node_modules
 !wp-content/themes/
 !wp-content/mu-plugins/
  
