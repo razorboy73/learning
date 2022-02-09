@@ -11,24 +11,23 @@ pageBanner(array(
   
     <div class="container container--narrow page-section">
 
-    <ul class= "link-list min-list">
-   <?php
-    if(have_posts()){
-      while(have_posts()){ 
-        the_post()?>
-      
-      <li><a href="<?php the_permalink(); ?>"><?php the_title();
-      $mapLocation = get_field("map_location");
-      print_r($mapLocation);
-      
-      ?></a></li>
+        <div class="acf-map">
+            <?php
+            if(have_posts()){
+                while(have_posts()){ 
+                the_post();
+                $mapLocation = get_field("map_location");
+                ?>
+                <div class="marker" data-lat="<?php echo $mapLocation["lat"]; ?>" data-long="<?php echo $mapLocation["lng"] ?>"></div>
+        
 
-    
-       
-     <?php }// end of while loop
-    echo paginate_links();
-    }// end of if stateent
-   ?>
+        
+        
+                <?php }// end of while loop
+                echo paginate_links();
+            }// end of if stateent
+            ?>
+        </div>
   </div>
 <?php
 get_footer()
