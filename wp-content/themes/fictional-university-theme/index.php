@@ -1,7 +1,13 @@
 <?php
-get_header()
+get_header();
+pageBanner(array(
+  "title" => "Welcome to the Blarg",
+  "subtitle" => "Keep Up With The News",
+  "photo" =>"https://images.unsplash.com/photo-1644333192098-75573dacbb0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+
+));
 ?>
-   <div class="page-banner">
+   <!-- <div class="page-banner">
         <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg')?>);"></div>
         <div class="page-banner__content container container--narrow">
             <h1 class="page-banner__title"><?php wp_title(NULL) ?></h1>
@@ -9,7 +15,7 @@ get_header()
             <p>Keep Up With The News</p>
             </div>
         </div>
-        </div>
+    </div> -->
   
     <div class="container container--narrow page-section">
    <?php

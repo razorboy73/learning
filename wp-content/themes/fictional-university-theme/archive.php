@@ -1,49 +1,13 @@
 <?php
-get_header()
+get_header();
+pageBanner(array(
+  "title" => get_the_archive_title(),
+  "subtitle" => get_the_archive_description(),
+  "photo" =>"https://images.unsplash.com/photo-1644333192098-75573dacbb0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+
+));
 ?>
-   <div class="page-banner">
-        <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg')?>);"></div>
-        <div class="page-banner__content container container--narrow">
-            <h1 class="page-banner__title">
-            <?php
-            if (is_category( )){
-                 single_cat_title();
-            ?>
-            </h1>
-            <div class="page-banner__intro">
-            <p><?php echo category_description();?> </p>
-            </div>
 
-            <?php }
-
-            elseif(is_author()){
-            echo "Posts by ";   the_author();
-
-            ?>
-            </h1>
-            <div class="page-banner__intro">
-            <p><?php echo get_the_author_meta("description");?> </p>
-            </div>
-
-          <?php  }
-
-          else{
-              the_archive_title(); ?>
-
-            <div class="page-banner__intro">
-            <p><?php the_archive_description();?> </p>
-            </div>
-
-              
-          <?php }
-
-
-            ?>
-
-
-           
-        </div>
-        </div>
   
     <div class="container container--narrow page-section">
    <?php
