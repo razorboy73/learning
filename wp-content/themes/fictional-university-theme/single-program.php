@@ -115,7 +115,7 @@ pageBanner(array(
                 echo "<ul class='min-list link-list'>";
                 foreach($relatedCampuses as $campus){
                  ?>
-                 <li><a href="<?php echo get_the_permalink() ?>"><?php echo get_the_title($campus)?></a></li>
+                 <li><a href="<?php echo get_the_permalink($campus) ?>"><?php echo get_the_title($campus)?></a></li>
                  <?php
                 }
                 echo "<ul>";
