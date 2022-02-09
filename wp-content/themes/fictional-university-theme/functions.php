@@ -109,5 +109,5 @@ function universityMapKey($api){
 }
 
 
-add_filter("acf/fields/google_ma-/api", "universityMapKey")
+add_filter("acf/fields/google_map/api", "universityMapKey")
 ?>
