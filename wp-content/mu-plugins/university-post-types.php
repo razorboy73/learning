@@ -94,6 +94,37 @@ function university_post_types(){
 
     );
 
+    //Campus post type
+    register_post_type("campus", array(
+        //for the archive, it uses the register post type name parameter, not the label
+        //or url rewrite
+        "has_archive" => true,
+     
+        "show_in_rest" => true,
+        "description" => "What is going on around campus",
+        "public" => true,
+        "labels" => array(
+            "name" => "Campuses",
+            "add_new_item" => "Add Hot New Campus",
+            "edit_item" => "Edit Your Hot Campus",
+            "all_items" => "All Hot Ass Campuses",
+            "singular_name" => "Campus",
+        ),
+        "menu_icon" => "dashicons-location-alt",
+        'rewrite'     => array( 'slug' => 'campuses' ),
+        "supports" => array(
+            "title",
+            "editor",
+            "thumbnail"
+           
+            
+
+        )
+        ),
+        
+
+    );
+
 }
 
 add_action("init","university_post_types");
