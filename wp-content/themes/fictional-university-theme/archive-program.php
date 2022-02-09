@@ -25,7 +25,7 @@ pageBanner(array(
     echo paginate_links();
     }// end of if stateent
    ?>
-  
+  </div>
 <?php
 get_footer()
 ?>
