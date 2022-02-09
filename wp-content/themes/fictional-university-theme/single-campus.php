@@ -75,42 +75,11 @@ pageBanner(array(
             echo "</ul>";
             }
             wp_reset_postdata();
-            
-            $today = date("Y-m-d");
-            //has to match return value in ACF
-            $homePageEvents = new WP_Query(array(
-            "posts_per_page" => 2,
-            "post_type" => 'event',
-            "meta_key"=> "event_date",
-            //https://developer.wordpress.org/reference/classes/wp_query/#order-orderby-parameters
-            "orderby" => "meta_value_num",
-            'order' => "ASC",
-            //https://developer.wordpress.org/reference/classes/wp_meta_query/#user-contributed-notes
-            "meta_query" => array(
-              array(
-                "key"=>"event_date",
-                "compare" => ">=",
-                "value"=> $today,
-                "type" => 'DATE'
-              ),
-              array(
-                  "key" => 'related_programs',
-                  "compare"=> "LIKE",
-                  "value" => '"'.get_the_ID().'"'
-              )
-            )
-          ));
+            ?>
+           
 
-          if($homePageEvents->have_posts()){
-            echo "<hr class='section-break'>";
-            echo "<h2 class='headline headline--medium'> Upcoming ". get_the_title()." Events</h2>";
-                while($homePageEvents->have_posts()){
-                    $homePageEvents->the_post(); 
-                    get_template_part("/template-parts/content", get_post_type());
-                }
-                ?>
-            <?php
-             }?>
+          
+            
    </div> 
     
 <?php
