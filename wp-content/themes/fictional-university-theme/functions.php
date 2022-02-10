@@ -49,6 +49,12 @@ function university_files(){
     wp_enqueue_script("font-awesome-js", get_template_directory_uri().'/fontawesome/js/all.min.js',array(), false, true);
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     
+
+    wp_localize_script( 'main-university-js', "universityData", array(
+      "root_url"=>get_site_url(),
+      
+
+    ) );
    
 }
 
