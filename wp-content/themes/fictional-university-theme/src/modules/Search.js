@@ -47,8 +47,18 @@ class Search {
     $.getJSON(
       "http://localhost/learning/wp-json/wp/v2/posts?search=" +
         this.searchField.val(),
-      function (posts) {
-        alert(posts[0].title.rendered);
+      (posts) => {
+        this.resultsDiv.html(`
+              <h2 class="search-overlay__section-title">General Information</h2>
+              <ul class = "link-list min-list">
+                ${posts
+                  .map(
+                    (item) =>
+                      `<li><a href="${item.link}">${item.title.rendered}</a></li>`
+                  )
+                  .join("")}
+              </ul>
+          `);
       }
     );
   }
