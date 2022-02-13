@@ -4114,6 +4114,7 @@ class Search {
   }
 
   getResults() {
+    console.log(this.resultsDiv);
     jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), results => {
       this.resultsDiv.html(`
         <div class="row">
@@ -4183,8 +4184,8 @@ class Search {
   openOverlay() {
     this.searchOverlay.addClass("search-overlay--active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("body-no-scroll");
-    this.searchField.val(""); //this.resultsDiv.html("");
-
+    this.searchField.val("");
+    this.resultsDiv.html("");
     setTimeout(() => this.searchField.trigger("focus"), 325);
     this.isOverlayOpen = true;
   }

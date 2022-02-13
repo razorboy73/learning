@@ -45,6 +45,7 @@ class Search {
   }
 
    getResults() {
+     console.log(this.resultsDiv)
     $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), results => {
       this.resultsDiv.html(`
         <div class="row">
@@ -126,7 +127,7 @@ class Search {
     this.searchOverlay.addClass("search-overlay--active");
     $("body").addClass("body-no-scroll");
     this.searchField.val("");
-    //this.resultsDiv.html("");
+    this.resultsDiv.html("");
     setTimeout(() => this.searchField.trigger("focus"), 325);
     this.isOverlayOpen = true
   }
