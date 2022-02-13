@@ -4198,7 +4198,7 @@ class Search {
 
   addSearchHTML() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").append(`
-        <div class ="search-overlay">
+        <div class ="search-overlay ">
         <div class="search-overlay__top">
           <div class="container">
             <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
