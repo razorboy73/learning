@@ -16,14 +16,72 @@ class WordCountAndTimePlugin {
   
     function settings() {
       add_settings_section('wcp_first_section', null, null, 'word-count-settings-page');
+
+      //location tag
       add_settings_field('wcp_location', 'Display Location', array($this, 'locationHTML'), 'word-count-settings-page', 'wcp_first_section');
-      register_setting('wordcountplugin', 'wcp_location', array('sanitize_callback' => 'sanitize_text_field', 'default' => '0'));
+      register_setting('wordcountplugin', 'wcp_location', array('sanitize_callback' => array($this, 'sanitizeLocation'), 'default' => '0'));
+      //headline Option
+      add_settings_field('wcp_headline', 'Headline Text', array($this, 'headlineHTML'), 'word-count-settings-page', 'wcp_first_section');
+      register_setting('wordcountplugin', 'wcp_headline', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Post Statistics'));
+      //wordcount
+      add_settings_field('wcp_wordcount', 'Word Count', array($this, 'checkboxHTML'), 'word-count-settings-page', 'wcp_first_section', array('theName' =>'wcp_wordcount'));
+      register_setting('wordcountplugin', 'wcp_wordcount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+
+       //character count
+       add_settings_field('wcp_charcount', 'Character Count', array($this, 'checkboxHTML'), 'word-count-settings-page', 'wcp_first_section', array('theName' =>'wcp_charcount'));
+       register_setting('wordcountplugin', 'wcp_charcount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+
+       //Read time
+       add_settings_field('wcp_readtime', 'Read Time', array($this, 'checkboxHTML'), 'word-count-settings-page', 'wcp_first_section', array('theName' =>'wcp_readtime'));
+       register_setting('wordcountplugin', 'wcp_readtime', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+
+
+
     }
-  
+/*
+    function readtimeHTML() { ?>
+      <input type="checkbox" name="wcp_readtime" value="1" <?php checked(get_option('wcp_readtime'), '1') ?>>
+  <?php }
+
+    function charactercountHTML() { ?>
+      <input type="checkbox" name="wcp_charcount" value="1" <?php checked(get_option('wcp_charcount'), '1') ?>>
+  <?php }
+
+    function wordcountHTML() { ?>
+        <input type="checkbox" name="wcp_wordcount" value="1" <?php checked(get_option('wcp_wordcount'), '1') ?>>
+    <?php }
+
+*/
+
+
+function sanitizeLocation($input){
+
+  if($input != "0" AND $input != "1"){
+    add_settings_error('wcp_location', "wcp_location_error", "Display location must be either begining or end");
+    return get_option('wcp_location');
+  }
+  return $input;
+}
+function checkboxHTML($args){ ?>
+
+<input type="checkbox" name="<?php echo $args['theName'] ?>" value="1" <?php checked(get_option($args['theName']),'1')?>>
+
+<?php }
+
+
+
+    function headlineHTML(){ ?>
+
+      <input type="text" name="wcp_headline" value="<?php echo esc_attr(get_option('wcp_headline')) ?> ">
+
+    <?php }
+
+   
+
     function locationHTML() { ?>
       <select name="wcp_location">
-        <option value="0">Beginning of post</option>
-        <option value="1">End of post</option>
+        <option value="0" <?php selected(get_option('wcp_location'), "0") ?>>Beginning of post</option>
+        <option value="1" <?php selected(get_option('wcp_location'), "1") ?>>End of post</option>
       </select>
     <?php }
   
