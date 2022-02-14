@@ -12,8 +12,55 @@ class WordCountAndTimePlugin {
     function __construct() {
       add_action('admin_menu', array($this, 'adminPage'));
       add_action('admin_init', array($this, 'settings'));
+      add_filter("the_content", array($this, "ifWrap"));
     }
   
+
+    function ifWrap($content){
+      if((is_main_query() AND is_single()) AND
+      (
+         get_option("wcp_wordcount","1") OR 
+         get_option("wcp_charcount","1") OR 
+         get_option("wcp_readtime","1")
+      ))
+      {
+        return $this->createHTML($content);
+      }
+      return $content;
+    }
+
+    function createHTML($content){
+      $html = "<h3>" .  esc_html(get_option('wcp_headline', 'Post Statistics')) ."</h3><p>";
+      //get wordcount once but only run it if word count or read time are requested
+      if(get_option("wcp_wordcount","1") OR get_option("wcp_readtime","1")){
+        $wordCount = str_word_count(strip_tags($content));
+      }
+
+      
+      if(get_option("wcp_wordcount","1")){
+        $html .= 'This post has ' . $wordCount .' words.<br>';
+      }
+
+      if(get_option("wcp_charactercount","1")){
+        $html .= "This post has " . strlen(strip_tags($content)). " characters.<br>";
+      }
+
+      if(get_option("wcp_readtime","1")){
+        $html .= 'This post will take ' . round($wordCount/225) .' minutes to read.<br>';
+      }
+
+      $html .= "</p>";
+
+
+      if(get_option("wcp_location",'0') =='0'){
+        return $html . $content;
+      }
+      return $content . $html;
+    }
+
+    
+
+
     function settings() {
       add_settings_section('wcp_first_section', null, null, 'word-count-settings-page');
 
