@@ -18,6 +18,15 @@ class OurWordFilterPlugin {
 
     function __construct(){
         add_action("admin_menu", array($this, "ourMenu"));
+        if(get_option("plugin_words_to_filter")) add_filter("the_content", array($this,'filterLogic'));
+    }
+
+    function filterLogic($content){
+
+        $badWords = explode(,get_option(",", "plugin_words_to_filter"));
+        $badWordsTrimmed = array_map("trim", "$badWords");
+        str_replace($badWordsTrimmed, "******", $content)
+
     }
 
     function ourMenu(){
