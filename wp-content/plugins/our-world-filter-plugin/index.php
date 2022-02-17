@@ -26,9 +26,9 @@ class OurWordFilterPlugin {
             "wordFilterPage"
              ),
              "dashicons-smiley",100);
-        add_submenu_page( "ourwordfilter", "Word Filter Options", "Options", "manage_options", "word-filter-options", array(
+        add_submenu_page( "ourwordfilter", "Words To Filter", "Words List", "manage_options", "ourwordfilter", array(
                 $this,
-                "optionsSubPage"
+                "wordFilterPage"
             ));
         
         add_submenu_page( "ourwordfilter", "Word Filter Options", "Options", "manage_options", "word-filter-options", array(
