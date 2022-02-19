@@ -31,8 +31,35 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention",{
 
     save: function(props){
         return (
+            <h3>!!!!!!Today the sky is ;jsdf;jhdsf;jhds; {props.attributes.skyColor} and the grass is {props.attributes.grassColor}.</h3>
+        )
+
+    },
+    deprecated:[{
+
+        attributes:{
+            skyColor: {type:"string"},
+            grassColor: {type: "string"},
+
+        },
+    save: function(props){
+        return (
+            <p>Today the sky is ;jsdf;jhdsf;jhds; {props.attributes.skyColor} and the grass is {props.attributes.grassColor}.</p>
+        )
+    }
+    }, {
+        attributes:{
+            skyColor: {type:"string"},
+            grassColor: {type: "string"},
+
+    }, 
+    save: function(props){
+        return (
             <p>Today the sky is {props.attributes.skyColor} and the grass is {props.attributes.grassColor}.</p>
         )
 
     }
-}) 
+
+    }]
+})
+ 
