@@ -35,4 +35,4 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention",{
         )
 
     }
-})
+}) 
