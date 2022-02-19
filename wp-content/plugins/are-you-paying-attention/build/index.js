@@ -94,11 +94,45 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
   title: "Are You Paying Attention",
   icon: "Smiley",
   category: "common",
-  edit: function () {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Hello, this is a paragraph!!!!!"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "Hi there"));
+  attributes: {
+    skyColor: {
+      type: "string"
+    },
+    grassColor: {
+      type: "string"
+    }
   },
-  save: function () {
-    return wp.element.createElement("h1", null, "!This is the front end of JSX!");
+  edit: function (props) {
+    function updateSkyColor(event) {
+      props.setAttributes({
+        skyColor: event.target.value
+      });
+    }
+
+    function updateGrassColor(event) {
+      props.setAttributes({
+        grassColor: event.target.value
+      });
+    }
+
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      name: "",
+      id: "",
+      placeholder: "sky color",
+      value: props.attributes.skyColor,
+      onChange: updateSkyColor
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      name: "",
+      id: "",
+      placeholder: "Grass Color",
+      value: props.attributes.grassColor,
+      onChange: updateGrassColor
+    }));
+  },
+  save: function (props) {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Today the sky is ", props.attributes.skyColor, " and the grass is ", props.attributes.grassColor, ".");
   }
 });
 }();
