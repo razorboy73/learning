@@ -48,10 +48,16 @@ class AreYouPayingAttention{
 
     function theHTML($attributes){
 
-
+        if(!is_admin()){
+            wp_enqueue_script("attentionFrontend", plugin_dir_url(__FILE__ )."build/frontend.js", array(
+                "wp-element"
+            ));
+            wp_enqueue_style("attentionFrontendStyles",plugin_dir_url(__FILE__)."build/frondend.css");
+ 
+        }
+       
         ob_start(); ?>
-            <h2>Today the sky is <?php echo esc_html($attributes['skyColor'])?> and the grass is <?php echo esc_html($attributes['grassColor'])?>!!!</h2>
-
+        <div class="paying-attention-update-me"></div>
         <?php  return ob_get_clean(); 
     }
 
