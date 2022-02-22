@@ -52,7 +52,7 @@ class AreYouPayingAttention{
             wp_enqueue_script("attentionFrontend", plugin_dir_url(__FILE__ )."build/frontend.js", array(
                 "wp-element"
             ));
-            wp_enqueue_style("attentionFrontendStyles",plugin_dir_url(__FILE__)."build/frondend.css");
+            wp_enqueue_style("attentionFrontendStyles",plugin_dir_url(__FILE__)."build/frontend.css");
  
         }
        
