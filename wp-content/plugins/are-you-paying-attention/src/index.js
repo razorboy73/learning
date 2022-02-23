@@ -1,7 +1,7 @@
 import "./index.scss"
 import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon, PanelBody, PanelRow, ColorPicker} from "@wordpress/components"
 import { checkPropTypes } from "prop-types"
-import {InspectorControls} from "@wordpress/block-editor"
+import {InspectorControls, BlockControls, AlignmentToolbar} from "@wordpress/block-editor"
 import {ChromePicker} from  "react-color"
 
 function ourStartFunction(){
@@ -33,14 +33,25 @@ ourStartFunction()
 
 wp.blocks.registerBlockType("ourplugin/are-you-paying-attention",{
     title: "Are You Paying Attention",
-    icon: "Smiley",
+    icon: "smiley",
     category:"common",
     attributes:{
         question: {type:"string"},
         answers: {type: "array", default: [""]},
         correctAnswer:{ type:"number", default: undefined },
-        bgColor:{type:"string", default:"#EBEBEB"}
+        bgColor:{type:"string", default:"#EBEBEB"},
+        theAlignment: {type:"string", default:"left"}
 
+    },
+    description: "Josh's plugin",
+    example: {
+        attributes:{
+            question: "What is my name?",
+            correctAnswer: 3,
+            answers:["Meowsalot", "Barksalot", "Purssloud", "Josh"],
+            theAlignment: "center",
+            bgColor: " #CFE8f1"
+        }
     },
     edit: EditComponent,
 
@@ -78,7 +89,9 @@ function EditComponent(props){
     }
     return (
         <div className="paying-attention-edit-block" style={{backgroundColor: props.attributes.bgColor}}>
-
+            <BlockControls>
+                <AlignmentToolbar value={props.attributes.theAlignment} onChange={x => props.setAttributes({theAlignment: x})}></AlignmentToolbar>
+            </BlockControls>
             <InspectorControls>
                 <PanelBody title="Background Color" initialOpen={true}>
                     <PanelRow>
