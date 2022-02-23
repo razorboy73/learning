@@ -1,6 +1,8 @@
 import "./index.scss"
-import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon} from "@wordpress/components"
+import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon, PanelBody, PanelRow, ColorPicker} from "@wordpress/components"
 import { checkPropTypes } from "prop-types"
+import {InspectorControls} from "@wordpress/block-editor"
+import {ChromePicker} from  "react-color"
 
 function ourStartFunction(){
 
@@ -36,7 +38,8 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention",{
     attributes:{
         question: {type:"string"},
         answers: {type: "array", default: [""]},
-        correctAnswer:{ type:"number", default: undefined }
+        correctAnswer:{ type:"number", default: undefined },
+        bgColor:{type:"string", default:"#EBEBEB"}
 
     },
     edit: EditComponent,
@@ -74,7 +77,15 @@ function EditComponent(props){
         props.setAttributes({correctAnswer: index})
     }
     return (
-        <div className="paying-attention-edit-block">
+        <div className="paying-attention-edit-block" style={{backgroundColor: props.attributes.bgColor}}>
+
+            <InspectorControls>
+                <PanelBody title="Background Color" initialOpen={true}>
+                    <PanelRow>
+                       <ChromePicker color={props.attributes.bgColor} onChangeComplete={x => props.setAttributes({bgColor:x.hex})} disableAlpha={true}></ChromePicker>
+                    </PanelRow>
+                </PanelBody>
+            </InspectorControls>
             <TextControl    label="Question:" value={props.attributes.question} style={{fontSize: "20px"}} onChange={updateQuestion}/>
             <p style ={{fontSize: "13px", margin: "20px 0 8px 0"}}>Answers:</p>
 

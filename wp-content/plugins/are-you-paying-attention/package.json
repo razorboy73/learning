@@ -4,14 +4,15 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "build":"wp-scripts build src/index.js src/frontend.js",
-    "start":"wp-scripts start src/index.js src/frontend.js",
+    "build": "wp-scripts build src/index.js src/frontend.js",
+    "start": "wp-scripts start src/index.js src/frontend.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wordpress/scripts": "^21.0.2"
+    "@wordpress/scripts": "^21.0.2",
+    "react-color": "^2.19.3"
   }
 }
