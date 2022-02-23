@@ -27,7 +27,9 @@ function university_post_types(){
             "excerpt",
             
 
-        )
+        ),
+        "capability_type" => "event",
+        "map_meta_cap" => true
         ),
         
 
@@ -116,10 +118,9 @@ function university_post_types(){
             "title",
             "editor",
             "thumbnail"
-           
-            
-
-        )
+        ),
+        "capability_type" => "campus",
+        "map_meta_cap" => true
         ),
         
 
