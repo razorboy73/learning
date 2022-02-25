@@ -126,6 +126,38 @@ function university_post_types(){
 
     );
 
+    register_post_type("note", array(
+        //Creates note post type
+        //for the archive, it uses the register post type name parameter, not the label
+        //or url rewrite
+        
+        "supports"=> array("title", "editor,"),
+        "show_in_rest" => true,
+        "description" => "Capture your class notes",
+        "public" => false,
+        "show_ui" =>true,
+        "labels" => array(
+            "name" => "Notes",
+            "add_new_item" => "Add New Crappy Note",
+            "edit_item" => "Edit Your Boring Note",
+            "all_items" => "All Old Notes",
+            "singular_name" => "Note",
+        ),
+        "menu_icon" => "dashicons-welcome-write-blog",
+        
+        "supports" => array(
+            "title",
+            "editor",
+            "excerpt",
+            "thumbnail"
+            
+
+        )
+        ),
+        
+
+    );
+
 }
 
 add_action("init","university_post_types");
