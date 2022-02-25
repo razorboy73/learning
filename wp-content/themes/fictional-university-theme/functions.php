@@ -187,4 +187,11 @@ function ourLoginCSS(){
   wp_enqueue_style("font-awesome", get_template_directory_uri().'/fontawesome/css/all.min.css');
  
 }
+
+
+add_filter("login_headertext","ourLoginTitle");
+
+function ourLoginTitle(){
+  return get_bloginfo("name");
+}
 ?>
