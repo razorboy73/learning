@@ -61,6 +61,7 @@ function university_files(){
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_localize_script( 'main-university-js', "universityData", array(
       "root_url"=>get_site_url(),
+      "nonce" => wp_create_nonce("wp_rest")
 
 
     ) );
