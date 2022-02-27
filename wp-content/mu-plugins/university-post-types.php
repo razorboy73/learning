@@ -130,7 +130,8 @@ function university_post_types(){
         //Creates note post type
         //for the archive, it uses the register post type name parameter, not the label
         //or url rewrite
-        
+        "capability_type" => "note",
+        "map_meta_cap" => true,
         "supports"=> array("title", "editor,"),
         "show_in_rest" => true,
         "description" => "Capture your class notes",

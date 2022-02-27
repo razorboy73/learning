@@ -118,7 +118,7 @@ class MyNotes{
                 <textarea readonly class="note-body-field" name="" id="" cols="30" rows="10">${response.content.raw}</textarea>
                 <span class="update-note btn btn--blue btn--small"><i class="fas fa-arrow-right" aria-hidden="true"> </i> Save</span>
              
-            </li>
+            </li> 
                 
                 
                 `).prependTo("#my-notes").hide().slideDown();

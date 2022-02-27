@@ -4178,7 +4178,7 @@ class MyNotes {
                 <textarea readonly class="note-body-field" name="" id="" cols="30" rows="10">${response.content.raw}</textarea>
                 <span class="update-note btn btn--blue btn--small"><i class="fas fa-arrow-right" aria-hidden="true"> </i> Save</span>
              
-            </li>
+            </li> 
                 
                 
                 `).prependTo("#my-notes").hide().slideDown();
@@ -4313,7 +4313,7 @@ class Search {
   }
 
   keyPressDispatcher(e) {
-    if (e.keyCode == 83 && !this.isOverlayOpen && !"input, textarea".is(":focus")) {
+    if (e.keyCode == 83 && !this.isOverlayOpen && document.activeElement.tagName != "INPUT" && document.activeElement.tagName != "TEXTAREA") {
       this.openOverlay();
     }
 
