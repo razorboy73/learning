@@ -25,8 +25,36 @@ pageBanner(array(
     
     <div class="generic-content"><?php the_content(); ?></div>
     </div> 
+    <!-- Environment: We're in a theme template file -->
 
+    <div class="post-taxonomies">
+    <!-- thumbs is the name of the taxonomy" -->
+	//We gave this a <?php the_terms( get_the_ID(), 'thumbs' ); ?>
 
+    
+    </div>
+
+    <?php
+
+/* Environment: This could be any PHP file */
+
+// Define a class
+class Chair {
+    public $color;
+    private $origin_factory;
+
+    public function __construct($color = "orange", $origin_factory = "Cleveland"){
+        $this->color = $color;
+        $this-> origin_factory = $origin_factory;
+
+    }
+    
+}
+
+// Instantiate an object of the class
+$default_orange_chair = new Chair;
+echo $default_orange_chair->color;
+?>
     
    
     

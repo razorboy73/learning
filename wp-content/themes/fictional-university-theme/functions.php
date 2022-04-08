@@ -57,8 +57,8 @@ function university_files(){
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script('googleMap', "//maps.googleapis.com/maps/api/js?key=AIzaSyCanSBlOFWxNbdr3dtMpFHMHwDHRxr_wYk", NULL, '1.0', true);
     wp_enqueue_style("custom-google-fonts", "//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i");
-    wp_enqueue_style("university_main_styles", get_template_directory_uri().'/build/style-index.css');
-    wp_enqueue_style("university_extra_styles", get_template_directory_uri().'/build/index.css');
+    wp_enqueue_style("university_main_styles", get_stylesheet_directory_uri().'/build/style-index.css');
+    wp_enqueue_style("university_extra_styles", get_stylesheet_directory_uri().'/build/index.css');
     wp_enqueue_style("font-awesome", get_template_directory_uri().'/fontawesome/css/all.min.css');
     wp_enqueue_script("font-awesome-js", get_template_directory_uri().'/fontawesome/js/all.min.js',array(), false, true);
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
@@ -84,9 +84,10 @@ function university_features(){
     add_image_size("professorPortrait", 480, 650, true);
     add_image_size("pageBanner",1500, 350, true);
     //added a menu code name and user friendly name
-    register_nav_menus(array("headerMenuLocation" => __("Header Menu"), 
+    register_nav_menus(array("headerMenuLocation" => __("Silly Header Menu"), 
                             'footerLocation1' => __( 'Footer 1 menu' ),
-                            'footerLocation2' => __( 'Footer 2 menu' )
+                            'footerLocation2' => __( 'Footer 2 menu' ),
+                            "main-nav" => __("Main Nav Tutorial")
                         ));
 }
 add_action("after_setup_theme", 'university_features');
@@ -220,4 +221,38 @@ function makeNotePrivate($data, $postarr){
     }
   return $data;
 }
+
+
+// Only run if wpshout_filter_example() does not already exist
+if ( ! function_exists( 'wpshout_filter_example' ) ) {
+	function wpshout_filter_example( $title ) {
+		return 'Hooked: '.$title;
+	}
+	add_filter( 'the_title', 'wpshout_filter_example' );	
+}
+
+
+
+/*let's put a widget in the footer */
+
+function footer_widget(){
+
+  register_sidebar(array(
+    'name' => 'Footer Widget',
+    'id' => 'footer_widget',
+    'description' => "Our Widgetized Footer",
+    'class' => '',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget'  => "</li>\n",
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => "</h2>",
+
+  ));
+
+
+  
+}
+add_action("widget_init","footer_widget")
+
+
 ?>

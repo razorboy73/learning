@@ -1,0 +1,19 @@
+/*
+Theme Name:     university Child
+Theme URI:      https://upandrunningwp.com/
+Description:    Child theme for the Ficitional Univiersity
+Author:         Josh
+Author URI:     https://frshminds.com
+Template:       fictional-university-theme
+Version:        1.0.0
+
+
+http://localhost/learning/wp-content/themes/fictional-university-theme/build/style-index.css?ver=5.9
+http://localhost/learning/wp-content/themes/university-child-theme/build/style-index.css?ver=5.9'
+
+
+@import url("../fictional-university-theme/build/style-index.css");
+@import url("../fictional-university-theme/build/index.css");
+
+
+

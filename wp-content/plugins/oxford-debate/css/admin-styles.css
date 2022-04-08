@@ -1,0 +1,38 @@
+/**********************************/
+/*** OXFORD DEBATE ADMIN STYLES ***/
+/**********************************/
+
+/*** GENERAL ***/
+
+.oxd-admin-row h2 {
+    font-size: 1.3em;
+}
+.oxd-admin-row h3 {
+    font-size: 1.1em;
+}
+.oxd-admin-logo {
+    max-width: 245px;
+}
+.admin-success {
+    color: #7ad03a;
+}
+.oxd-admin-row {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 20px 40px;
+}
+.oxd-admin-row table td {
+    padding: 5px 0px;
+}
+.oxd-admin-row .form-table, .oxd-admin-row .form-table td, .oxd-admin-row .form-table td p, .oxd-admin-row .form-table th {
+    font-size: 13px;
+}
+.oxd-admin-table.form-table td {
+    max-width: 0;
+}
+blockquote {
+    font-family: monospace;
+}
+.wp-menu-image.dashicons-before img {
+    width: 36px;
+}

@@ -1,0 +1,674 @@
+/****************************/
+/*** OXFORD DEBATE STYLES ***/
+/****************************/
+/*** GENERAL ***/
+
+.debates-hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #dddddd;
+}
+#debate-section {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+#postures-section {
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0
+}
+#votes-section {
+    margin-bottom: 10px;
+}
+#votes-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#votes-container {
+    padding: 5px 20px 20px 20px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+#vote-count {
+    margin-bottom: 15px;
+}
+#vote-count ul {
+    margin: 0 0 4px 0;
+}
+#debate-header {
+    margin-bottom: 50px;
+}
+.circle-text::before {
+    color: red;
+    content: "●";
+    font-size: 1em;
+    margin-right: 2px;
+    vertical-align: top;
+    white-space: pre;
+}
+.circle-text::after {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.circle-text {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+.posture-circle-container .circle-text::before {
+    color: inherit;
+}
+#duration-container p {
+    width: 100%;
+    padding: 10px;
+    line-height: 8px;
+}
+.shortcode-duration-container p {
+    width: 100%;
+    padding: 10px;
+    line-height: 8px;
+}
+.debates-container .more-link {
+    font-weight: bold;
+}
+.debates-container .row {
+    margin-bottom: 5px;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+/*** DEBATES ***/
+
+#current-percent-container {
+    width: 200px;
+    background-color: #333;
+    float: right;
+}
+#duration-text span {
+    font-weight: bold;
+}
+#duration-container {
+    float: right;
+}
+#current-percent {
+    background-color: #FBD302;
+    height: 5px;
+    max-width: 100%!important;
+}
+#author_name {
+    font-weight: bold;
+}
+#under-title {
+    margin-bottom: 0px;
+    position: relative;
+}
+#postures-title-a p,
+#postures-title-b p {
+    margin: 0px;
+}
+#postures-title-container-a {
+    padding-bottom: 10px;
+}
+#postures-title-container-b {
+    padding-bottom: 10px;
+}
+#postures-title-a {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #FFF;
+    text-transform: uppercase
+}
+#postures-title-b {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #FFF;
+    text-transform: uppercase
+}
+#postures-title-a p span,
+#postures-title-b p span {
+    font-weight: bold;
+}
+#postures-contents {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+}
+#postures-content-a {} #postures-content-b {} #postures-content-a,
+#postures-content-b {
+    padding: 20px 20px;
+    background-color: white;
+}
+#postures-contents .row {
+    z-index: 1;
+}
+#postures-container-a {
+    float: left;
+    padding-right: 0px;
+    margin-left: -15px;
+}
+#postures-container-b {
+    float: right;
+    padding-left: 0px;
+    margin-right: -15px;
+}
+#postures-votes {
+    width: 100%;
+    float: left;
+}
+#postures-vote-a {
+    padding: 20px 20px
+}
+#postures-vote-b {
+    padding: 20px 20px
+}
+.postures-vote {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.postures-vote p {
+    text-transform: uppercase;
+}
+#debates-header {
+    width: 100%;
+}
+.speaker-info-div {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.speaker-info-div img {
+    width: 33%;
+    height: auto;
+    max-width: 160px;
+    float: left;
+    margin-right: 15px;
+}
+.speaker-name {
+    font-weight: bold;
+    text-transform: uppercase
+}
+#vote-button-a,
+#vote-a,
+#vote-button-b,
+#vote-b {
+    float: right;
+    margin-top: -6px;
+}
+#vote-button-a,
+#vote-button-b,
+#vote-a,
+#vote-b {
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 6px 12px;
+}
+#vote-button-a a,
+#vote-button-b a,
+#vote-a a,
+#vote-b a {
+    color: white;
+}
+#vote-button-a:hover,
+#vote-button-b:hover,
+#vote-a:hover,
+#vote-b:hover,
+#vote-button-a:disabled,
+#vote-button-b:disabled,
+#vote-a:disabled,
+#vote-b:disabled {
+    background-color: #aaa;
+}
+#vote-button-a:disabled,
+#vote-button-b:disabled,
+#vote-a:disabled,
+#vote-b:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+#vote-button-a:hover a,
+#vote-button-b:hover a,
+#vote-a:hover a,
+#vote-b:hover a {
+    text-decoration: none;
+}
+.oxd-button {
+    background-color: #FBD302;
+    border: none;
+}
+.oxd-button:hover {
+    background-color: #DEBB00;
+}
+#vote-count ul {
+    padding: 0;
+}
+#vote-count-a {
+    width: 100%;
+}
+#vote-count-b {
+    width: 100%;
+}
+#vote-a-bar {
+    background-color: #A7EEED;
+    margin-bottom: 5px;
+    padding: 3px 3px;
+    text-align: center;
+    white-space: nowrap;
+}
+#vote-b-bar {
+    background-color: #FF997D;
+    padding: 3px 3px;
+    text-align: center;
+    white-space: nowrap;
+}
+.days_list_a_on {
+    background-color: #A7EEED;
+}
+.days_list_b_on {
+    background-color: #FF997D;
+}
+.days_list_a_off,
+.days_list_b_off {
+    background-color: #F1F1F1;
+}
+.days_list_a_on,
+.days_list_a_off,
+.days_list_b_on,
+.days_list_b_off {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    outline: 3px solid white;
+}
+.days_list_a_on,
+.days_list_b_on {
+    padding: 9px 0;
+    height: 40px;
+}
+.days_list_a_off,
+.days_list_b_off {
+    padding: 9px 0;
+    height: 40px;
+}
+.days_list_count {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 0;
+    text-transform: uppercase
+}
+#debate-tags {
+    font-weight: bold;
+    padding-top: 3px;
+    text-align: left;
+}
+/*** Tooltip for unregistered users ***/
+/* Tooltip container */
+
+.oxd-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+/* Tooltip text */
+
+.oxd-tooltip .oxd-tooltiptext {
+    visibility: hidden;
+    min-width: 180px;
+    width: auto;
+    background-color: #545454;
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    /* Position the tooltip text - see examples below! */
+    
+    position: absolute;
+    z-index: 1;
+    text-transform: none;
+    top: -40px;
+    right: 0;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.oxd-tooltip:hover .oxd-tooltiptext {
+    visibility: visible;
+}
+/*** Social Share Buttons ***/
+
+#social-share {
+    width: 100%;
+    text-align: right;
+}
+#social-share-hidden {
+    display: none;
+    width: 100%;
+    text-align: right;
+}
+#social-share-hidden img {
+    width: 25px;
+    display: inline-block;
+}
+#social-share img {
+    width: 25px;
+    display: inline-block;
+}
+#show-social-share {
+    cursor: pointer;
+    background-image: url('../img/icon_+.png');
+}
+#show-social-share:hover {
+    background-image: url('../img/roll_+.png');
+}
+#show-social-share.active {
+    background-image: url('../img/icon_x.png');
+}
+#show-social-share.active:hover {
+    background-image: url('../img/roll_x.png');
+}
+.primary-social-list {
+    display: inline-flex;
+    list-style-type: none;
+    margin-bottom: 0;
+    position: absolute;
+    padding: 0;
+    right: 0px;
+    margin: 0!important;
+}
+.secondary-social-list {
+    list-style-type: none;
+    float: right;
+    position: absolute;
+    margin-top: 25px;
+    right: 0px;
+}
+#li-twitter,
+#li-facebook,
+#li-email,
+#li-linkedin,
+#li-telegram,
+#li-whatsapp,
+#show-social-share,
+#hide-social-share {
+    width: 30px;
+    height: 25px;
+    background-size: cover;
+}
+#li-twitter {
+    background-image: url('../img/icon_twt.png');
+}
+#li-twitter:hover {
+    background-image: url('../img/roll_twt.png');
+}
+#li-facebook {
+    background-image: url('../img/icon_f.png');
+}
+#li-facebook:hover {
+    background-image: url('../img/roll_f.png');
+}
+#li-email {
+    background-image: url('../img/icon_email.png');
+}
+#li-email:hover {
+    background-image: url('../img/roll_email.png');
+}
+#li-linkedin {
+    background-image: url('../img/icon_in.png');
+}
+#li-linkedin:hover {
+    background-image: url('../img/roll_in.png');
+}
+#li-telegram {
+    background-image: url('../img/icon_telegram.png');
+}
+#li-telegram:hover {
+    background-image: url('../img/roll_telegram.png');
+}
+#li-whatsapp {
+    background-image: url('../img/icon_whatsapp.png');
+}
+#li-whatsapp:hover {
+    background-image: url('../img/roll_whatsapp.png');
+}
+#share-title {
+    float: right;
+    right: 115px;
+    position: relative;
+    margin-top: 3px;
+}
+/*** COMMENTS ***/
+
+#comments select {
+    border-radius: 0px!important;
+}
+#comments input {
+    border-radius: 0px!important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    margin-bottom: 10px;
+}
+#comments #submit {
+    border: none;
+    background-color: #333;
+    padding: 6px 12px;
+    color: white;
+    float: right;
+}
+#comments #submit:hover {
+    background-color: #545454;
+}
+#comments #posture-selector {
+    border-radius: 0px!important;
+    border: 1px solid #666;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -webkit-appearance: none;
+    padding: 3px 10px;
+}
+#comments .form-submit {
+    margin-top: 10px;
+}
+#comments #comment {
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid #666;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    resize: none;
+}
+#comments-list {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+#comments .comment-form {
+    background-color: white;
+    padding: 20px 20px 60px 20px;
+}
+#comments-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#comments #reply-title {
+    font-weight: bold;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+#comments li {
+    list-style-type: none;
+}
+#comments .reply a {
+    border: none;
+    background-color: #333;
+    padding: 6px 12px;
+    color: white;
+}
+#comments .reply a:hover {
+    text-decoration: none;
+    background-color: #545454;
+}
+#comments-list .avatar {
+    display: none;
+}
+#comments-list .comment-author.vcard {
+    font-weight: bold;
+}
+#comments-list .says {
+    display: none;
+}
+#comments-list .comment-body {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 20px;
+}
+#comments-list .comment-meta a {
+    text-decoration: none;
+    color: #aaaaaa;
+}
+#comments-list ol.commentlist {
+    padding: 10px 10px 0px 10px;
+}
+.reply {
+    float: none;
+    width: -webkit-calc(100% - 124px);
+    width: calc(100% - 124px);
+    word-wrap: break-word;
+    margin-top: 12px;
+}
+.debates-container .fn {
+    display: flex;
+}
+/*** DEBATES LIST SHORTCODE ***/
+
+.debate-list-container {
+    padding: 30px 30px 75px 30px;
+    margin-bottom: 30px;
+}
+.debate-list-container .col {
+    padding: 15px 0px;
+}
+.debates-list {
+    list-style-type: none!important;
+    /*border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;*/
+    
+    padding: 0;
+}
+.debates-list li {
+    padding: 5px 20px;
+    background-color: #F1F1F1;
+    margin-bottom: 20px;
+    /*border-bottom: 1px solid #666;*/
+}
+.shortcode-debate-title {
+    font-weight: bold;
+}
+.shortcode-speaker-title {
+    font-weight: bold;
+}
+#shortcode-current-percent-container {
+    width: 70px;
+    background-color: #333;
+    float: right;
+}
+.shortcode-speakera-div {
+    float: left;
+    width: 50%;
+}
+.shortcode-speakerb-div {
+    float: right;
+    width: 50%;
+}
+.shortcode-duration-container {
+    margin-left: 30%;
+    padding-right: 15px;
+    float: left;
+}
+/*** MEDIA QUERIES ***/
+
+@media (max-width: 767px) {
+    #postures-title-container-a,
+    #postures-title-container-b {
+        padding-bottom: 0px;
+    }
+    .postures-vote {
+        margin-top: 0px;
+    }
+    div.postures-container {
+        margin-bottom: 20px;
+    }
+    #postures-container-a,
+    #postures-container-b {
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    #vote-button-a,
+    #vote-button-b,
+    #vote-a,
+    #vote-b {
+        position: absolute;
+        right: 0px;
+        bottom: 10px;
+        font-size: 1.5em;
+        padding: 16px 22px;
+    }
+    #postures-vote-a,
+    #postures-vote-b,
+    #vote-a,
+    #vote-b {
+        padding: 10px 20px;
+    }
+    .postures-container {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    #postures-title-a,
+    #postures-title-b {
+        text-align: center;
+    }
+    #comments .reply a {
+        font-size: 1.0em;
+        padding: 6px 9px;
+    }
+    #logo-container {
+        width: 93px;
+        height: 35px;
+        float: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .duration-col {
+        padding-top: 50px!important;
+        padding-bottom: 0px!important;
+    }
+    .shortcode-duration-container {
+        margin-left: 0;
+        text-align: left;
+    }
+    .debate-list-container {
+        margin-right: -35px;
+        margin-left: -35px;
+        padding-bottom: 0px;
+    }
+    .go-debate-button {
+        margin-right: -30px;
+        margin-bottom: -70px;
+        height: 50px;
+        width: 100px;
+        font-size: 20px;
+    }
+}

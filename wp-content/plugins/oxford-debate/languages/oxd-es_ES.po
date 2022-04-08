@@ -1,0 +1,586 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Oxford Debates Wordpress\n"
+"POT-Creation-Date: 2017-01-16 15:41+0100\n"
+"PO-Revision-Date: 2017-01-16 15:46+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: oxd-settings.php:85
+msgid "Debate Details"
+msgstr "Detalles del debate"
+
+#: oxd-settings.php:109
+msgid "Start Date:"
+msgstr "Fecha de inicio:"
+
+#: oxd-settings.php:121
+msgid "End Date:"
+msgstr "Fecha fin:"
+
+#: oxd-settings.php:155
+msgid "Proposal A:"
+msgstr "Postura A:"
+
+#: oxd-settings.php:161 oxd-settings.php:218
+msgid "Select a Proposal"
+msgstr "Selecciona una postura"
+
+#: oxd-settings.php:198
+msgid "Select Proposal A"
+msgstr "Selecciona la postura A"
+
+#: oxd-settings.php:202 oxd-settings.php:258
+msgid "Select a different colour for this proposal"
+msgstr "Selecciona un color diferente para esta postura"
+
+#: oxd-settings.php:212
+msgid "Proposal B:"
+msgstr "Postura B:"
+
+#: oxd-settings.php:255
+msgid "Select Proposal B"
+msgstr "Selecciona la postura A"
+
+#: oxd-settings.php:268
+msgid "No authors found"
+msgstr "No se ha encontrado ningún autor"
+
+#: oxd-settings.php:302
+msgid "Start Date cannot be later than End Date."
+msgstr "La fecha de inicio no puede ser posterior a la fecha de fin del debate"
+
+#: oxd-settings.php:309
+msgid ""
+"You must assign both proposals before publishing. Now, your debate status is "
+"\"Draft\"."
+msgstr ""
+"Ambas posturas deben ser asignadas antes de publicar. Tu debate ha pasado al "
+"estado \"Borrador\"."
+
+#: oxd.php:135
+msgid "Your product has been registered. Happy Debating! "
+msgstr "Oxford-Style Debate ha sido registrado. ¡Empieza a debatir!"
+
+#: oxd.php:143
+msgid ""
+"Something is going wrong. Your product couldn’t be registered. Try again!"
+msgstr ""
+"Algo ha fallado, no se pudo completar el registro. ¡Inténtalo de nuevo!"
+
+#: oxd.php:310
+msgid "Oxford-Style Debate Settings"
+msgstr "Ajustes de Oxford-Style Debate"
+
+#: oxd.php:311
+msgid ""
+"Oxford-Style Debate is an easy and simple plugin to create debates on your "
+"website in four steps:"
+msgstr ""
+"Oxford-Style Debate es un plugin para crear debates de forma simple y fácil:"
+
+#: oxd.php:313
+msgid "Create a debate and give a starting date and closing date."
+msgstr "Crea un debate y selecciona la fecha de inicio y de fin."
+
+#: oxd.php:314
+msgid ""
+"Create two proposals and give your personal touch with media resources or "
+"colors."
+msgstr ""
+"Crea dos posturas y dale tu toque personal con colores o recursos "
+"multimedia. "
+
+#: oxd.php:315
+msgid "Go to Debate, link the proposals to the debate and publish it."
+msgstr "Enlaza las posturas con el debate y publícalo. "
+
+#: oxd.php:316
+msgid "Happy debating!"
+msgstr "¡Empieza a debatir!"
+
+#: oxd.php:324
+msgid "Insight Oxford-Style Debate"
+msgstr "Insight Oxford-Style Debate"
+
+#: oxd.php:325
+msgid ""
+"Now you can enrich the Oxford-Style Debate with an Insight Oxford-Style "
+"Debate beta version. This feature will allow you to get more information and "
+"display the voting progress on the debate. If you want to try it, email us "
+"at "
+msgstr ""
+"Ahora puedes enriquecer tu Oxford-Style Debate con una versión beta de "
+"Insight Oxford-Style Debate. Este producto te permite conocer más "
+"información sobre tus usuarios y publicar gráficos de evolución del voto en "
+"tu debate. Si quieres probarlo, envíanos un email a "
+
+#: oxd.php:333
+msgid "Register"
+msgstr "Enlazar Insight Oxford-Style Debate"
+
+#: oxd.php:334
+msgid ""
+"If you have already registered an Insight Oxford-style Debate account, "
+"please enter the product key."
+msgstr ""
+"Si ya has dispones de una cuenta de Insight Oxford-Style Debate, por favor "
+"introduce el código de producto."
+
+#: oxd.php:336
+msgid "Portal key code "
+msgstr "Código de portal "
+
+#: oxd.php:356 oxd.php:363
+msgid "Unregister"
+msgstr "Borrar"
+
+#: oxd.php:357
+msgid ""
+"If you wish to unregister Insight Oxford-style Debate by removing the "
+"product key, press the following button.\n"
+msgstr ""
+"Si quieres eliminar tu cuenta de Insight Oxford-Style Debate, pulsa en el "
+"siguiente botón.\n"
+
+#: oxd.php:370
+msgid "Users votes"
+msgstr "Votos de los usuarios"
+
+#: oxd.php:377
+msgid "Only users with an account on the portal can vote:"
+msgstr "Sólo los usuarios con una cuenta en el portal pueden votar:"
+
+#: oxd.php:384 oxd.php:387 oxd.php:500 oxd.php:503 oxd.php:522 oxd.php:525
+#: oxd.php:1432
+msgid "Yes"
+msgstr "Sí"
+
+#: oxd.php:385 oxd.php:388 oxd.php:501 oxd.php:504 oxd.php:523 oxd.php:526
+msgid "No"
+msgstr "No"
+
+#: oxd.php:406
+msgid "Social Media"
+msgstr "Redes Sociales"
+
+#: oxd.php:413
+msgid "Select where to share debates:"
+msgstr "Selecciona dónde quieres compartir debates:"
+
+#: oxd.php:443
+msgid "Oxford-Style Debate Styles"
+msgstr "Estilos para Oxford-Style Debate"
+
+#: oxd.php:444
+msgid "Customize debates with your own style."
+msgstr "Personaliza los debates con tu propio estilo."
+
+#: oxd.php:452
+msgid "Plugin Colours"
+msgstr "Colores del plugin"
+
+#: oxd.php:453
+msgid ""
+"Select the colour for the plugin. It will be displayed at buttons and "
+"progress bar."
+msgstr ""
+"Selecciona los colores para el plugin. Se mostrarán en los botones y en la "
+"barra de progreso."
+
+#: oxd.php:460
+msgid "Debate Colours"
+msgstr "Color de los debates"
+
+#: oxd.php:461
+msgid ""
+"Select the colours for each proposal. These colours will affect to all the "
+"debates. If you want to change the colour of a specific debate, you can "
+"select it from the debate page."
+msgstr ""
+"Elige los colores para cada postura. Estos colores afectarán a todos los "
+"debates. Si deseas cambiar el color de un debate específico, puedes "
+"seleccionarlo desde la página de debate."
+
+#: oxd.php:463
+msgid "Proposal A Colour:"
+msgstr "Color de la postura A:"
+
+#: oxd.php:465
+msgid "Proposal B Colour:"
+msgstr "Color de la postura B:"
+
+#: oxd.php:481
+msgid "Oxford-Style Debate Layout"
+msgstr "Oxford-Style Debate Layout"
+
+#: oxd.php:492
+msgid "Bootstrap grid"
+msgstr "Bootstrap"
+
+#: oxd.php:494
+msgid "Check option YES, if your theme do not use Bootstrap."
+msgstr "En el caso de que tu tema no use Bootstrap marca la opción SI."
+
+#: oxd.php:515
+msgid "Container fluid"
+msgstr "Container Fluid"
+
+#: oxd.php:517
+msgid ""
+"If you check option YES, the plugin width will be adapted to your theme’s "
+"container."
+msgstr ""
+"Si marcas la opción SÍ, la anchura de los debates se adaptará a su "
+"contenedor. "
+
+#: oxd.php:544
+msgid "Shortcode options"
+msgstr "Opciones de shortcode"
+
+#: oxd.php:548
+msgid "Basic shortcode"
+msgstr "Shortcode básico"
+
+#: oxd.php:554
+msgid "Open debates shortcode"
+msgstr "Shortcode debates abiertos"
+
+#: oxd.php:555
+msgid "It lists only the open debates on your page."
+msgstr "Lista únicamente los debates abiertos en tu página."
+
+#: oxd.php:561
+msgid "Closed debates shortcode"
+msgstr "Shortcode debates cerrados"
+
+#: oxd.php:562
+msgid "It lists only the closed debates on your page."
+msgstr "Lista únicamente los debates cerrados en tu página."
+
+#: oxd.php:568
+msgid "Coming soon debates shortcode"
+msgstr "Shortcode próximos debates"
+
+#: oxd.php:569
+msgid "It lists only the debates that are coming soon."
+msgstr "Lista únicamente los próximos debates en tu página."
+
+#: oxd.php:575
+msgid "Number of listed debates"
+msgstr "Número de debates listados"
+
+#: oxd.php:591 oxd.php:593
+msgid "Proposals"
+msgstr "Posturas"
+
+#: oxd.php:592 templates/comments-debate.php:81
+#: templates/comments-debate.php:82
+msgid "Proposal"
+msgstr "Postura"
+
+#: oxd.php:594
+msgid "All Proposals"
+msgstr "Todas las posturas"
+
+#: oxd.php:595
+msgid "View Proposal"
+msgstr "Ver postura"
+
+#: oxd.php:596
+msgid "Add Proposal"
+msgstr "Añadir postura"
+
+#: oxd.php:635
+msgctxt "posture"
+msgid "Proposals Categories"
+msgstr "Categorías"
+
+#: oxd.php:636
+msgctxt "posture"
+msgid "Proposal Category"
+msgstr "Categoría"
+
+#: oxd.php:637
+msgid "Search Proposal Categories"
+msgstr "Buscar categorías"
+
+#: oxd.php:638
+msgid "All Proposal Categories"
+msgstr "Todas las categorías"
+
+#: oxd.php:639
+msgid "Parent Proposal Category"
+msgstr "Categoría padre"
+
+#: oxd.php:640
+msgid "Parent Proposal Category:"
+msgstr "Categoría padre:"
+
+#: oxd.php:641
+msgid "Edit Proposal Category"
+msgstr "Editar categoría"
+
+#: oxd.php:642
+msgid "Update Proposal Category"
+msgstr "Actualizar categoría"
+
+#: oxd.php:643
+msgid "Add New Proposal Category"
+msgstr "Añadir nueva categoría"
+
+#: oxd.php:644
+msgid "New Proposal Category"
+msgstr "Nueva categoría"
+
+#: oxd.php:645
+msgid "Proposal Categories"
+msgstr "Categorías"
+
+#: oxd.php:659 oxd.php:661
+msgid "Debates"
+msgstr "Debates"
+
+#: oxd.php:660
+msgid "Debate"
+msgstr "Debate"
+
+#: oxd.php:662
+msgid "All Debates"
+msgstr "Todos los debates"
+
+#: oxd.php:663
+msgid "View Debate"
+msgstr "Ver debate"
+
+#: oxd.php:664
+msgid "Add Debate"
+msgstr "Añadir debate"
+
+#: oxd.php:703
+msgctxt "debate"
+msgid "Debates Categories"
+msgstr "Categorías"
+
+#: oxd.php:704
+msgctxt "debate"
+msgid "Debate Category"
+msgstr "Categoría"
+
+#: oxd.php:705
+msgid "Search Debate Categories"
+msgstr "Buscar categoría"
+
+#: oxd.php:706
+msgid "All Debate Categories"
+msgstr "Todas las categorías"
+
+#: oxd.php:707
+msgid "Parent Debate Category"
+msgstr "Categoría padre"
+
+#: oxd.php:708
+msgid "Parent Debate Category:"
+msgstr "Categoría padre:"
+
+#: oxd.php:709
+msgid "Edit Debate Category"
+msgstr "Editar categorías"
+
+#: oxd.php:710
+msgid "Update Debate Category"
+msgstr "Actualizar categoría"
+
+#: oxd.php:711
+msgid "Add New Debate Category"
+msgstr "Añadir categoría"
+
+#: oxd.php:712
+msgid "New Debate Category"
+msgstr "Añadir nueva categoría"
+
+#: oxd.php:713
+msgid "Debate Categories"
+msgstr "Categorías"
+
+#: oxd.php:808
+msgid "For Proposal "
+msgstr "A favor de "
+
+#: oxd.php:810
+msgid "For Alternative Proposal"
+msgstr "Otra"
+
+#: oxd.php:978 oxd.php:1210 templates/single-debate.php:138
+msgid "days"
+msgstr "días"
+
+#: oxd.php:1036 oxd.php:1225 templates/single-debate.php:158
+msgid "Closed Debate"
+msgstr "Debate cerrado"
+
+#: oxd.php:1112 oxd.php:1225 templates/single-debate.php:152
+msgid "Days to begin: "
+msgstr "Días para comenzar: "
+
+#: oxd.php:1432
+msgid ""
+"Oxford-Style Debate is a plugin about debating with quite a lot enriched "
+"features. Do you want to have a quick tour?"
+msgstr ""
+"Oxford-Style Debate es un plugin para crear debates con un montón de "
+"funcionalidades. ¿Quieres saber cómo funciona?"
+
+#: oxd.php:1432
+msgid "No thanks, I will set myself"
+msgstr "No gracias, yo lo configuro"
+
+#: templates/comments-debate.php:24
+msgid "Comments"
+msgstr "Comentarios"
+
+#: templates/comments-debate.php:44
+msgid "Comment navigation"
+msgstr "Navegar por los comentarios"
+
+#: templates/comments-debate.php:45
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios antiguos"
+
+#: templates/comments-debate.php:46
+msgid "Newer Comments &rarr;"
+msgstr "Nuevos comentarios &rarr;"
+
+#: templates/comments-debate.php:55
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: templates/comments-debate.php:61
+msgid "Got Something To Say"
+msgstr "¿Algo que decir?"
+
+#: templates/comments-debate.php:65
+msgid "Your name"
+msgstr "Tu nombre"
+
+#: templates/comments-debate.php:71
+msgid "Your email"
+msgstr "Tu email"
+
+#: templates/comments-debate.php:83
+msgid "Other"
+msgstr "Otros"
+
+#: templates/single-debate.php:103 templates/single-debate.php:107
+msgid "More"
+msgstr "Más"
+
+#: templates/single-debate.php:134
+msgid "Duration:"
+msgstr "Duración:"
+
+#: templates/single-debate.php:183
+msgid "You may be interested in the debate: "
+msgstr "Creo que podría interesarte el debate: "
+
+#: templates/single-debate.php:183
+msgid " at "
+msgstr " en "
+
+#: templates/single-debate.php:191
+msgid "Share debate on "
+msgstr "Compartir debate en "
+
+#: templates/single-debate.php:275
+msgid "Proposal A"
+msgstr "Postura A"
+
+#: templates/single-debate.php:302 templates/single-debate.php:367
+msgid "Votes "
+msgstr "Votos "
+
+#: templates/single-debate.php:308 templates/single-debate.php:312
+#: templates/single-debate.php:315 templates/single-debate.php:320
+#: templates/single-debate.php:323
+msgid "Vote A"
+msgstr "Voto A"
+
+#: templates/single-debate.php:308 templates/single-debate.php:374
+msgid "You must be registered to participate in the debate."
+msgstr "Tienes que estar registrado para participar en el debate."
+
+#: templates/single-debate.php:312 templates/single-debate.php:320
+#: templates/single-debate.php:378 templates/single-debate.php:386
+msgid "Voted"
+msgstr "Votado"
+
+#: templates/single-debate.php:340
+msgid "Proposal B"
+msgstr "Postura B"
+
+#: templates/single-debate.php:374 templates/single-debate.php:378
+#: templates/single-debate.php:381 templates/single-debate.php:386
+#: templates/single-debate.php:389
+msgid "Vote B"
+msgstr "Voto B"
+
+#~ msgid "It lists all the debates on your page."
+#~ msgstr "Lista únicamente los debates abiertos en tu página."
+
+#~ msgid "All Debates Shortcode:"
+#~ msgstr "Shortcode de todos los debates:"
+
+#~ msgid "Place this shortcode wherever you want to list the debates:"
+#~ msgstr "Sitúa este shortcode donde quieras listar los debates:"
+
+#~ msgid "Posture Colour"
+#~ msgstr "Color de la postura"
+
+#~ msgid "Select a Posture"
+#~ msgstr "Seleccione una postura"
+
+#~ msgid "Product key code "
+#~ msgstr "Código de producto:"
+
+#~ msgid "Oxford Debate Settings"
+#~ msgstr "Ajustes de Oxford Debate"
+
+#~ msgid "Plugin Register"
+#~ msgstr "Registro del plugin"
+
+#~ msgid ""
+#~ "We are working on an enriched version of your debates with Insight Oxford-"
+#~ "Style Debate beta version. This feature will allow you to know better "
+#~ "your users and add visual display on the debate for vote evolution. If "
+#~ "you want to know more, email us at "
+#~ msgstr ""
+#~ "Estamos trabajando en nuevas funcionales del plugin con la versión beta "
+#~ "de Insight Oxford-style Debate, que te permitirán conocer mejor a los "
+#~ "participantes del debate y añadir gráficos de evolución de voto en tu "
+#~ "zona de debate. Para más información, escríbenos a "
+
+#~ msgid "Only registered users can vote."
+#~ msgstr "Solo los usuarios registrados pueden votar."
+
+#~ msgid "All Debates Shortcode"
+#~ msgstr "Shortcode de todos los debates"
+
+#~ msgid ""
+#~ "Place this shortcode wherever you would like the debates list to show:"
+#~ msgstr "Coloca este código en el lugar donde quieras listar los debates:"
+
+#~ msgid "Select where to share debates."
+#~ msgstr "Selecciona las redes sociales donde quieras compartir tus debates."
